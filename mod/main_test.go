@@ -9,11 +9,11 @@ import (
 func TestMaxOnesAfterRemoveItem(t *testing.T) {
 	assert := assert.New(t)
 
-	assert.Equal(maxOnesAfterRemoveItem([]byte{0, 0}), uint(0))
-	assert.Equal(maxOnesAfterRemoveItem([]byte{0, 1}), uint(1))
-	assert.Equal(maxOnesAfterRemoveItem([]byte{1, 0}), uint(1))
-	assert.Equal(maxOnesAfterRemoveItem([]byte{1, 1}), uint(1))
-	assert.Equal(maxOnesAfterRemoveItem([]byte{1, 1, 0, 1, 1}), uint(4))
-	assert.Equal(maxOnesAfterRemoveItem([]byte{1, 1, 0, 1, 1, 0, 1, 1, 1}), uint(5))
-	assert.Equal(maxOnesAfterRemoveItem([]byte{1, 1, 0, 1, 1, 0, 1, 1, 1, 0}), uint(5))
+	assert.Equal(uint(0), maxOnesAfterRemoveItem([]byte{0, 0}))
+	assert.Equal(uint(1), maxOnesAfterRemoveItem([]byte{0, 1}))
+	assert.Equal(uint(1), maxOnesAfterRemoveItem([]byte{1, 0}))
+	assert.Equal(uint(1), maxOnesAfterRemoveItem([]byte{1, 1}))
+	assert.Equal(uint(4), maxOnesAfterRemoveItem([]byte{1, 1, 0, 1, 1}))
+	assert.Equal(uint(5), maxOnesAfterRemoveItem([]byte{1, 1, 0, 1, 1, 0, 1, 1, 1}))
+	assert.Equal(uint(5), maxOnesAfterRemoveItem([]byte{1, 1, 0, 1, 1, 0, 1, 1, 1, 0}))
 }
